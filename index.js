@@ -4,7 +4,7 @@ import RestAPIRouter from './routes/programming.js';
 
 const app = express();
 app.use(cors());
-const PORT = 3000;
+const PORT = 443;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
@@ -19,5 +19,5 @@ app.use((err, req, res, next) => {
     return;
 });
 app.listen(PORT, () => {
-    console.log(`Example app listening at http://locahost:${PORT}`)
+    console.log(`Rest api Web service app listening on :${PORT}`)
 })
