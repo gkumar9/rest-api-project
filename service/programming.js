@@ -1,6 +1,8 @@
 import query from './database.js';
 import { getOffset, emptyOrRows } from '../helper.js';
 import config from '../config.js';
+import mysql from 'mysql2/promise';
+export const connection = await mysql.createConnection(config.db);
 
 export async function getMultipleDrugInventory() {
   const rows = await query(
